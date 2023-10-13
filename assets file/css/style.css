@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200&family=Montserrat:ital,wght@1,100;1,200&family=Roboto+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-foreground: #f9e9a8;
+    --input-box-color: #464c4f;
+    --active-color: #e5e469;
+    --secondary-foreground: #f9e9a8;
+    --primary-background: #182747;
+    --header-background: #001524;
+    --border-color: #f9e9a8;
+    --text-color: #a69e93;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-foreground);
+}
+
+p {
+    color: var(--secondary-foreground);
+    margin-bottom: 1.5rem;
+    line-height: 1.6rem;
+}
+
+html {
+    font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    background: var(--primary-background);
+    color: var(--primary-foreground);
+}
+
+/* Navbar */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    max-width: 1400px;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: var(--header-background);
+    z-index: 20;
+    padding: 0px 40px;
+}
+
+header img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+header .navlist {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-foreground);
+    transition: 0.3s;
+    display: block;
+    height: 100%;
+    padding: 1.5rem 0;
+}
+
+nav #menu {
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background-color: var(--active-color);
+    bottom: 10px;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.navlist button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navlist button img {
+    width: 1.5rem;
+}
+
+/* Content */
+
+main {
+    display: flex;
+    margin-top: 8rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+main article {
+    flex-grow: 1;
+}
+
+main article > * {
+    margin-bottom: 4rem;
+}
+
+main > *:last-child {
+    margin-bottom: 0rem;
+}
+
+/* About */
+
+#about{
+    border: 1px solid var(--active-color);
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--primary-background);
+}
+
+#about .describe,
+#about .describe p {
+    padding-right: 3rem;
+    color: var(--active-color);
+}
+
+#about .describe h1 {
+    color: var(--primary-foreground);
+}
+
+
+/* Skills */
+
+#skills {
+    border: 1px solid var(--active-color);
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--primary-background);
+}
+
+.Skills_logo {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+#skills h2 {
+    font-size: 24px;
+}
+
+#skills p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Form */
+
+form {
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: var(--secondary-foreground);
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: var(--input-box-color);
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+/* Biodata */
+
+aside {
+    padding-left: 7rem;
+}
+
+#biodata {
+    width: 350px;
+    position: sticky;
+    top: 7rem;
+}
+
+#biodata {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0rem;
+    font-size: 12px;
+    background-color: var(--input-box-color);
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: max-content;
+    background: var(--primary-background);
+    border: 1px solid var(--border-color);
+}
+
+#biodata:hover {
+    background-color: var(--header-background);
+    transition: 0.5s ease-in-out;
+}
+
+#biodata img {
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+#biodata h2 {
+    line-height: 0.5rem;
+    margin-top: 1rem;
+}
+
+#biodata h3 {
+    font-size: 1.1rem;
+    color: var(--active-color);
+}
+
+#biodata li {
+    color: var(--text-color);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 5rem;
+  padding: 2.5rem 0;
+  text-align: center;
+  background-color: var(--header-background); /* Ganti warna latar belakang footer */
+}
+
+.footer {
+  text-align: center;
+  padding: var(--gutter-medium) var(--gutter-large) var(--gutter-normal); /* Tambahkan jarak atas dan bawah, serta jarak antara sisi */
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+  padding: var(--gutter-normal) 0;
+  list-style: none;
+}
+
+.footer__social-link-item:not(:last-of-type) {
+  margin-right: var(--gutter-small);
+}
+
+.footer__social-image {
+  height: 4rem;
+}
+
+.footer__github-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__github-buttons iframe {
+  height: 2.5rem;
+  width: 84px;
+  transform: translateY(3px);
+}
